@@ -7,6 +7,8 @@
   grid-template-columns: 10% 1fr 1fr 1fr 10%;
   align-items: center;
   justify-items: center;
+  z-index: 3;
+  overflow: hidden;
 
   h3 {
     font-family: 'Ubuntu', sans-serif;
