@@ -2,49 +2,25 @@
   width: 100%;
   height: 10vh;
   position: absolute;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   display: grid;
   grid-template-columns: 10% 1fr 1fr 1fr 10%;
   align-items: center;
   justify-items: center;
-  z-index: 3;
+  z-index: 4;
   overflow: hidden;
 
   h3 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 1.9rem;
     color: white;
     letter-spacing: 0.4rem;
   }
-  
-  a {
-    text-decoration: none;
-    grid-column: 3;
-    align-self: bottom;
-    justify-self: left;
-  }
 
   p {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: white;
   }
 
-  .hamburger {
-    width: 45px;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    grid-column: 5;
-    cursor: pointer;
-    
-
-
-    .line {
-      width: 100%;
-      height: 3px;
-      border-radius: 2px;
-      background: #5f653e;
-    }
-  }
+  
 }

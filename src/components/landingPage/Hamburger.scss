@@ -1,0 +1,39 @@
+.hamburger {
+  width: 45px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-column: 5;
+  cursor: pointer;
+
+  .line1,
+  .line2,
+  .line3-right {
+    height: 3px;
+    border-radius: 2px;
+    border-radius: 2px;
+    background: #5f653e;
+    overflow: hidden;
+  }
+  .line1 {
+    width: 50%;
+  }
+
+  .line2,
+  .line3 {
+    width: 100%;
+  }
+
+  .line3 {
+    .blankLeft {
+      width: 50%;
+      float: left;
+    }
+
+    .line3-right {
+      width: 50%;
+      float: right;
+    }
+  }
+}
