@@ -49,7 +49,8 @@ function Team(props) {
     const bottomHoriLine = teamImg.children[7]
     const bottomVertLine = teamImg.children[8]
 
-    gsap.from([text, back], {x: -800, opacity: 0, duration: 3.5, ease: "power2" })
+    gsap.from(text, {x: -800, opacity: 0, duration: 3.5, ease: "power2" })
+    gsap.from(back, {x: 500, opacity: 0, duration: 3.5, ease: "power2" })
 
     gsap.from(teamImg1, { y: 50, opacity: 0, duration: 3.5, delay: 0.7, ease: "power2" })
     gsap.from(teamImg2, { y: 50, opacity: 0, duration: 3.5, delay: 0.3, ease: "power2" })

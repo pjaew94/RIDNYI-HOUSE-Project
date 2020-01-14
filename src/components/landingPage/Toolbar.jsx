@@ -18,12 +18,12 @@ function Toolbar(props) {
 
   })
 
-  
+
 
   return (
     <div className='navbar' ref={el => tool = el}>
       <h3>SMA</h3>
-      <Hamburger />
+      <Hamburger burgerStatus={props.burgerStatus} />
     </div>
   )
 }

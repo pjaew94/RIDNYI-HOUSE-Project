@@ -1,12 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { gsap, TimelineLite, TweenMax, Power2 } from 'gsap'
+import { gsap } from 'gsap'
 import { Link } from 'react-router-dom'
 
 import './LandingPage.scss'
 import Toolbar from './Toolbar'
+import NavigationMenu from './NavigationMenu'
 
 
 function LandingPage(props) {
+
+  // HamburgerState
+
+
+  const burgerStatus = []
+
+
+
+
 
   // EFFECTS
   let landing = useRef(null)
@@ -28,30 +38,30 @@ function LandingPage(props) {
     const imageMask = image.firstChild
 
 
-    gsap.from(leftBg, {y: -2000, duration: 3, ease: "power2"})
-    gsap.from(rightBg, {y: -2000, duration: 3, delay: 0.2, ease: "power2"})
+    gsap.from(leftBg, { y: -2000, duration: 3, ease: "power2" })
+    gsap.from(rightBg, { y: -2000, duration: 3, delay: 0.2, ease: "power2" })
 
-    gsap.from(year, {x: -300, opacity: 0, duration: 2, delay: 3.4, ease: "power2"})
-    gsap.from(title1, {x: -300, opacity: 0, duration: 2, delay: 3.6,ease: "power2"})
-    gsap.from(title2, {x: -300, opacity: 0, duration: 2, delay: 3.8,ease: "power2"})
-    gsap.from(description, {x: -300, opacity: 0, duration: 2, delay: 4, ease: "power2"})
-    gsap.from(locationArea, {x: 300, opacity: 0, duration: 2, delay: 4, ease: "power2"})
-    gsap.from(team, {x: 300, opacity: 0, duration: 2, delay: 3.2, ease: "power2"})
-    gsap.from(button, {x: -300, opacity: 0, duration: 2, delay: 4.2, ease: "power2"})
+    gsap.from(year, { x: -300, opacity: 0, duration: 2, delay: 3.4, ease: "power2" })
+    gsap.from(title1, { x: -300, opacity: 0, duration: 2, delay: 3.6, ease: "power2" })
+    gsap.from(title2, { x: -300, opacity: 0, duration: 2, delay: 3.8, ease: "power2" })
+    gsap.from(description, { x: -300, opacity: 0, duration: 2, delay: 4, ease: "power2" })
+    gsap.from(locationArea, { x: 300, opacity: 0, duration: 2, delay: 4, ease: "power2" })
+    gsap.from(team, { x: 300, opacity: 0, duration: 2, delay: 3.2, ease: "power2" })
+    gsap.from(button, { x: -300, opacity: 0, duration: 2, delay: 4.2, ease: "power2" })
 
-    gsap.to(imageMask, {x: "-100%", duration: 3.2, delay: 3, ease: "power2"})
-    gsap.to(image, {opacity: 1, duration: 3.2, delay: 3, ease: "power2"})
+    gsap.to(imageMask, { x: "-100%", duration: 3.2, delay: 3, ease: "power2" })
+    gsap.to(image, { opacity: 1, duration: 3.2, delay: 3, ease: "power2" })
 
   })
 
   function mouseOver(evt) {
-    gsap.fromTo(team, { x: 0 }, { duration: 2.5, x: -30, ease: "power2" })
-    gsap.to(teamLine, { duration: 2.5, x: 60, opacity: 1, ease: "power2"})
+    gsap.to(team, { duration: 2.5, x: -30, ease: "power2" })
+    gsap.to(teamLine, { duration: 2.5, x: 60, opacity: 1, ease: "power2" })
   }
 
   function mouseLeave(evt) {
-    gsap.fromTo(team, { x: -30 }, { duration: 2.5, x: 0, ease: "power2" })
-    gsap.fromTo(teamLine, { x: 60, opacity: 1 } ,{ duration: 2.5, x: 0, opacity: 0, ease: "power2"})
+    gsap.to(team, { duration: 2.5, x: 0, ease: "power2" })
+    gsap.to(teamLine, { duration: 2.5, x: 0, opacity: 0, ease: "power2" })
 
   }
 
@@ -60,24 +70,24 @@ function LandingPage(props) {
 
   return (
     <div className="landing-container" ref={el => landing = el}>
-      <Toolbar />
+      <Toolbar burgerStatus={burgerStatus} />
       <div className="left-background" ref={el => leftBg = el}>
         <div className="left-container">
           <div className='team-container'
-            onMouseEnter={mouseOver} 
+            onMouseEnter={mouseOver}
             onMouseLeave={mouseLeave}>
-              <div className='team'>
-                <p ref={el => team = el}>Meet the Team</p>
-              </div>
-            <div 
+            <div className='team'>
+              <p ref={el => team = el}>Meet the Team</p>
+            </div>
+            <div
               className='team-line' ref={el => teamLine = el}>
             </div>
             <div class='theButton'>
-            <Link  
-                to='/the-team' 
+              <Link
+                to='/the-team'
                 className='button-link'
                 exact style={{ textDecoration: 'none' }}>
-             </Link>
+              </Link>
             </div>
           </div>
 
@@ -109,6 +119,7 @@ function LandingPage(props) {
           </div>
         </div>
       </div>
+      {burgerStatus[0] ? <NavigationMenu /> : null}
     </div>
   )
 }

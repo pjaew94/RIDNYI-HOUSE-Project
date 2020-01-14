@@ -7,6 +7,7 @@
   grid-column: 5;
   cursor: pointer;
 
+
   .line1,
   .line2,
   .line3-right {
@@ -36,4 +37,15 @@
       float: right;
     }
   }
+}
+
+
+.navigation-menu {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 10;
 }
