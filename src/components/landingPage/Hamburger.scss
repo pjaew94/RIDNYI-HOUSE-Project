@@ -1,4 +1,5 @@
 .hamburger {
+  position: absolute;
   width: 45px;
   height: 25px;
   display: flex;
@@ -6,6 +7,7 @@
   justify-content: space-around;
   grid-column: 5;
   cursor: pointer;
+  z-index: 10;
 
 
   .line1,
@@ -14,7 +16,7 @@
     height: 3px;
     border-radius: 2px;
     border-radius: 2px;
-    background: #5f653e;
+    background-color: #938778;
     overflow: hidden;
   }
   .line1 {
@@ -40,12 +42,3 @@
 }
 
 
-.navigation-menu {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.3);
-  z-index: 10;
-}

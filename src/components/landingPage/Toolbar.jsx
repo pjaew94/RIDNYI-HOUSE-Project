@@ -1,29 +1,18 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Toolbar.scss'
-import { gsap } from 'gsap'
 import Hamburger from './Hamburger'
+import NavigationMenu from './NavigationMenu'
 
 
 function Toolbar(props) {
 
-  let tool = useRef(null)
-
-  useEffect(() => {
-    const logo = tool.children[0]
-    const burger = tool.children[1]
-
-
-    gsap.from(logo, {y: -200, opacity: 0, duration: 4, ease: "power3"})
-    gsap.from(burger, {y: -200, opacity: 0, duration: 4, ease: "power3"})
-
-  })
-
-
+  const [burgerClick, setBurgerClick] = useState(true)
 
   return (
-    <div className='navbar' ref={el => tool = el}>
+    <div className='navbar'>
       <h3>SMA</h3>
-      <Hamburger burgerStatus={props.burgerStatus} />
+      <Hamburger burgerStatus={burgerClick} setBurgerStatus={setBurgerClick} />
+      {burgerClick ? null: <NavigationMenu />}
     </div>
   )
 }

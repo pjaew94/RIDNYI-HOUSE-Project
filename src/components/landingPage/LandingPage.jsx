@@ -4,18 +4,11 @@ import { Link } from 'react-router-dom'
 
 import './LandingPage.scss'
 import Toolbar from './Toolbar'
-import NavigationMenu from './NavigationMenu'
+import NavigationCover from './NavigationCover'
+
 
 
 function LandingPage(props) {
-
-  // HamburgerState
-
-
-  const burgerStatus = []
-
-
-
 
 
   // EFFECTS
@@ -29,6 +22,7 @@ function LandingPage(props) {
 
   useEffect(() => {
 
+    const nav = landing.firstChild
     const year = content.children[0]
     const title1 = content.children[1]
     const title2 = content.children[2]
@@ -37,6 +31,7 @@ function LandingPage(props) {
     const button = content.children[4]
     const imageMask = image.firstChild
 
+    gsap.fromTo(nav, {y: -200, autoAlpha: 0}, {y:0, autoAlpha: 1, duration: 4, ease: "power3"})
 
     gsap.from(leftBg, { y: -2000, duration: 3, ease: "power2" })
     gsap.from(rightBg, { y: -2000, duration: 3, delay: 0.2, ease: "power2" })
@@ -70,7 +65,7 @@ function LandingPage(props) {
 
   return (
     <div className="landing-container" ref={el => landing = el}>
-      <Toolbar burgerStatus={burgerStatus} />
+      <Toolbar />
       <div className="left-background" ref={el => leftBg = el}>
         <div className="left-container">
           <div className='team-container'
@@ -119,7 +114,6 @@ function LandingPage(props) {
           </div>
         </div>
       </div>
-      {burgerStatus[0] ? <NavigationMenu /> : null}
     </div>
   )
 }

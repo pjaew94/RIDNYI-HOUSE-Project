@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { Route } from 'react-router-dom'
-import { CSSTransition } from 'react-transition-group'
-import { gsap } from 'gsap'
 import './App.scss';
 
-import LandingPage from './landingPage/LandingPage'
+import StartingPage from './StartingPage'
 import Team from './team/Team'
-import Toolbar from './landingPage/Toolbar'
 
 const routes = [
-  { path: '/', name: 'Home', Component: LandingPage },
+  { path: '/', name: 'Home', Component: StartingPage },
   { path: '/the-team', name: 'Team', Component: Team }
 ]
 

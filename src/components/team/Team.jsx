@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom'
 import './Team.scss'
 
 // Images import
-import team1 from '../images/team-1.png'
-import team2 from '../images/team-2.png'
-import team3 from '../images/team-3.png'
-import team4 from '../images/team-4.png'
-import team5 from '../images/team-5.png'
-import team1hover from '../images/team1hover.png'
-import team2hover from '../images/team2hover.png'
-import team3hover from '../images/team3hover.png'
-import team4hover from '../images/team4hover.png'
-import team5hover from '../images/team5hover.png'
+import team1 from '../images/team-images/team-1.png'
+import team2 from '../images/team-images/team-2.png'
+import team3 from '../images/team-images/team-3.png'
+import team4 from '../images/team-images/team-4.png'
+import team5 from '../images/team-images/team-5.png'
+import team1hover from '../images/team-images/team1hover.png'
+import team2hover from '../images/team-images/team2hover.png'
+import team3hover from '../images/team-images/team3hover.png'
+import team4hover from '../images/team-images/team4hover.png'
+import team5hover from '../images/team-images/team5hover.png'
 
 
 function Team(props) {

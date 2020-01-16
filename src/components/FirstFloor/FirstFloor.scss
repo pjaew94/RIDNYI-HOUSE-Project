@@ -1,0 +1,29 @@
+.first-floor {
+  width: 100%;
+  height: 300vh;
+  background: #cecdcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .first-floor-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+
+    .first-section {
+      border: 1px solid;
+      width: 100%;
+      height: 40vh;
+    }
+
+    .second-section {
+      border: 1px solid brown;
+      width: 100%;
+      height: 40vh;
+    }
+  }
+}

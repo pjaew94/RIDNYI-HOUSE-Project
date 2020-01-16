@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
+import Hamburger from './Hamburger'
+
 function NavigationMenu() {
 
   let navContainer = useRef(null)
@@ -23,11 +25,11 @@ function NavigationMenu() {
   let contactLine = useRef(null)
 
   useEffect(()=> {
+
     const topHoriLine = navContainer.firstChild.children[0]
     const topVertLine = navContainer.firstChild.children[1]
     const bottomHoriLine = navContainer.firstChild.children[8]
     const bottomVertLine = navContainer.firstChild.children[9]
-
 
     gsap.from(topHoriLine, { width: 0, duration: 2.5, delay: 1, ease: "power2" })
     gsap.from(topHoriLine, { left: 300, duration: 2.5, delay: 1, ease: "power2" })
