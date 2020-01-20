@@ -6,7 +6,7 @@ import { Link as LinkScroll } from 'react-scroll'
 
 import Hamburger from './Hamburger'
 
-function NavigationMenu() {
+function NavigationMenu(props) {
 
   let navContainer = useRef(null)
 
@@ -109,6 +109,10 @@ function NavigationMenu() {
     gsap.to(contactLine, {x: 0, autoAlpha: 0, duration: 2.5, ease: "power2"})
   }
 
+  function navClick() {
+    props.setBurgerStatus(true)    
+  }
+
 
   return (
     <div className="navigation-menu" ref={el => navContainer = el}>
@@ -120,8 +124,9 @@ function NavigationMenu() {
         <LinkScroll
           onMouseEnter={homeHover} 
           onMouseLeave={homeUnhover}
+          onClick={navClick}
           activeClass="active"
-          to="/"
+          to="Home"
           spy={true}
           smooth={true}
           duration={1200}
@@ -146,8 +151,9 @@ function NavigationMenu() {
         <LinkScroll
           onMouseEnter={firstHover} 
           onMouseLeave={firstUnhover}
+          onClick={navClick}
           activeClass="active"
-          to="/"
+          to="First Floor"
           spy={true}
           smooth={true}
           duration={1200}
@@ -160,8 +166,9 @@ function NavigationMenu() {
         <LinkScroll
           onMouseEnter={secondHover} 
           onMouseLeave={secondUnhover}
+          onClick={navClick}
           activeClass="active"
-          to="/"
+          to="Second Floor"
           spy={true}
           smooth={true}
           duration={1200}
@@ -174,8 +181,9 @@ function NavigationMenu() {
         <LinkScroll
           onMouseEnter={minusHover} 
           onMouseLeave={minusUnhover}
+          onClick={navClick}
           activeClass="active"
-          to="/"
+          to="Minus First Floor"
           spy={true}
           smooth={true}
           duration={1200}

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
-import { useInView, InView } from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer'
 import './FirstFloor.scss'
 
 import diningImg from '../images/first-images/diningroom.png'
@@ -12,7 +12,6 @@ function FirstFloor() {
 
   let firstFloor = useRef(null)
   let secondSection = useRef(null)
-  let thirdSection =useRef(null)
 
   const [text1, inViewText1] = useInView({
     threshold: 0.5,
@@ -37,7 +36,7 @@ function FirstFloor() {
   }, [inViewText2])
 
   const [img1, inViewImg1] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
     triggerOnce: true
   })
   useEffect(() => {
@@ -49,7 +48,7 @@ function FirstFloor() {
 
 
   const [img2, inViewImg2] = useInView({
-    threshold: 0.15,
+    threshold: 0.07,
     triggerOnce: true
   })
   useEffect(() => {
@@ -91,7 +90,7 @@ function FirstFloor() {
 
 
   return (
-    <div className='first-floor-wrap'>
+    <div name='First Floor' className='first-floor-wrap'>
       <div className='first-floor' >
 
         <div className="first-floor-container" ref={el => firstFloor = el}>

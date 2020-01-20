@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
-import { Link } from 'react-router-dom'
+import { Link as LinkRouter } from 'react-router-dom'
+import { Link as LinkScroll } from 'react-scroll'
 
 import './LandingPage.scss'
 import Toolbar from './Toolbar'
-import NavigationCover from './NavigationCover'
 
 
 
@@ -19,6 +19,10 @@ function LandingPage(props) {
   let teamLine = useRef(null)
   let rightBg = useRef(null)
   let image = useRef(null)
+  let tourLeft = useRef(null)
+  let tourRight = useRef(null)
+  let tourBottom = useRef(null)
+  let tourTop = useRef(null)
 
   useEffect(() => {
 
@@ -31,7 +35,7 @@ function LandingPage(props) {
     const button = content.children[4]
     const imageMask = image.firstChild
 
-    gsap.fromTo(nav, {y: -200, autoAlpha: 0}, {y:0, autoAlpha: 1, duration: 4, ease: "power3"})
+    gsap.fromTo(nav, { y: -200, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 4, ease: "power3" })
 
     gsap.from(leftBg, { y: -2000, duration: 3, ease: "power2" })
     gsap.from(rightBg, { y: -2000, duration: 3, delay: 0.2, ease: "power2" })
@@ -57,14 +61,26 @@ function LandingPage(props) {
   function mouseLeave(evt) {
     gsap.to(team, { duration: 2.5, x: 0, ease: "power2" })
     gsap.to(teamLine, { duration: 2.5, x: 0, opacity: 0, ease: "power2" })
-
   }
 
+  function mouseOverTour(evt) {
+    gsap.to(tourLeft, {duration: 2, y: -20, ease: "power2"})
+    gsap.to(tourRight, {duration: 2, y: 20, ease: "power2"})
+    gsap.to(tourTop, {duration: 2, autoAlpha: 0, ease: "power2"})
+    gsap.to(tourBottom, {duration: 2, autoAlpha: 0, ease: "power2"})
+  }
+
+  function mouseLeaveTour(evt) {
+    gsap.to(tourLeft, {duration: 2, y: 0, ease: "power2"})
+    gsap.to(tourRight, {duration: 2, y: 0, ease: "power2"})
+    gsap.to(tourTop, {duration: 2, autoAlpha: 1, ease: "power2"})
+    gsap.to(tourBottom, {duration: 2, autoAlpha: 1, ease: "power2"})
+  }
 
   // HTML
 
   return (
-    <div className="landing-container" ref={el => landing = el}>
+    <div name='Home' className="landing-container" ref={el => landing = el}>
       <Toolbar />
       <div className="left-background" ref={el => leftBg = el}>
         <div className="left-container">
@@ -78,11 +94,11 @@ function LandingPage(props) {
               className='team-line' ref={el => teamLine = el}>
             </div>
             <div class='theButton'>
-              <Link
+              <LinkRouter
                 to='/the-team'
                 className='button-link'
                 exact style={{ textDecoration: 'none' }}>
-              </Link>
+              </LinkRouter>
             </div>
           </div>
 
@@ -100,7 +116,21 @@ function LandingPage(props) {
                 <p><span>Metrics:</span> 1066 square meters</p>
               </div>
             </div>
-            <a href='/' className='begin-tour effect-1'>Begin Tour</a>
+            <LinkScroll
+              onMouseEnter={mouseOverTour}
+              onMouseLeave={mouseLeaveTour}
+              activeClass="active"
+              to="First Floor"
+              spy={true}
+              smooth={true}
+              duration={1200} className='begin-tour'
+            >
+              Begin Tour
+              <div className="tour-left" ref={el => tourLeft = el}></div>
+              <div className="tour-right" ref={el => tourRight = el}></div>
+              <div className="tour-bottom" ref={el => tourBottom = el}></div>
+              <div className="tour-top" ref={el => tourTop = el}></div>
+          </LinkScroll>
           </div>
         </div>
       </div>

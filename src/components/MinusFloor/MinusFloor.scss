@@ -1,0 +1,208 @@
+.minus-wrapper {
+  width: 100%;
+  height: auto;
+  background: #b6b5b4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color:white;
+  padding-bottom: 10%;
+  padding-top: 5%;
+
+  .minus-first-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15%;
+
+    .minus-left-container {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 3%;
+
+      .img1-container {
+        height: 80%;
+        width: 90%;
+        position: relative;
+
+        .img1 {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+        }
+
+        .img-mask-1 {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background: #b6b5b4;
+          top: 0;
+          z-index: 2;
+        }
+      }
+    }
+
+    .minus-right-container {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      z-index: 3;
+
+      .right-text-wrapper {
+        width: 80%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+
+        .minus-floor-title {
+          height: 30%;
+          width: 100%;
+          transform: translateX(300px);
+          opacity: 0;
+
+          h1 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 5rem;
+          }
+        }
+
+        .minus-floor-text {
+          font-family: "Work Sans", sans-serif;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding-top: 10%;
+          opacity: 0;
+          transform: translateX(300px);
+
+          p {
+            line-height: 2rem;
+            letter-spacing: 0.1rem;
+            margin-bottom: 5%;
+          }
+        }
+      }
+    }
+  }
+
+  .minus-second-section {
+    width: 95%;
+    height: 175vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .minus-second-left {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .minus-second-left-img1 {
+        height: 30%;
+        width: 95%;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 5%;
+
+        .top-left-carousel {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .left-img1-mask {
+          position: absolute;
+          height: 120%;
+          width: 100%;
+          background: #b6b5b4;
+          top: 0;
+        }
+      }
+
+      .minus-second-left-img2 {
+        height: 70%;
+        width: 95%;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .left-img2-mask {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: #b6b5b4;
+          top: 0;
+        }
+      }
+    }
+
+    .minus-second-right {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .minus-second-right-img1 {
+        height: 70%;
+        width: 95%;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .right-img1-mask {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: #b6b5b4;
+          top: 0;
+        }
+      }
+  
+      .minus-second-right-img2 {
+        height: 30%;
+        width: 95%;
+        position: relative;
+        margin-top: 5%;
+        overflow: hidden;
+
+        .bottom-right-carousel {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .right-img2-mask {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: #b6b5b4;
+          top: 0;
+        }
+      }
+    }
+  }
+}

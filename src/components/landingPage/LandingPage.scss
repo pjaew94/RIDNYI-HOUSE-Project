@@ -124,13 +124,47 @@
           color: white;
           font-size: 1.2rem;
           font-family: "Work Sans", sans-serif;
-          &:visited {
-            text-decoration: none;
-          }
+          cursor: pointer;
           padding: 20px 0px;
           width: 150px;
-          border: 1px solid white;
-          overflow: hidden;
+          // border-top: 1px solid white;
+          position: relative;
+
+          .tour-left,
+          .tour-right,
+          .tour-bottom,
+          .tour-top {
+            position: absolute;
+            background: white;
+          }
+
+          .tour-left {
+            width: 1px;
+            height: 100%;
+            left: 0;
+            top:0;
+          }
+
+          .tour-right {
+            width: 1px;
+            height: 100%;
+            right: 0;
+            top: 0;
+          }
+
+          .tour-bottom {
+            height: 1px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+          }
+
+          .tour-top {
+            height: 1px;
+            width: 100%;
+            top: 0;
+            left: 0;
+          }
         }
       }
     }

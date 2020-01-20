@@ -12,7 +12,7 @@ function Toolbar(props) {
     <div className='navbar'>
       <h3>SMA</h3>
       <Hamburger burgerStatus={burgerClick} setBurgerStatus={setBurgerClick} />
-      {burgerClick ? null: <NavigationMenu />}
+      {burgerClick ? null: <NavigationMenu burgerStatus={burgerClick} setBurgerStatus={setBurgerClick} />}
     </div>
   )
 }

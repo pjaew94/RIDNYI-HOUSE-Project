@@ -5,6 +5,8 @@ import './App.scss';
 
 import LandingPage from './landingPage/LandingPage'
 import FirstFloor from './FirstFloor/FirstFloor'
+import SecondFloor from './SecondFloor/SecondFloor'
+import MinusFloor from './MinusFloor/MinusFloor'
 
 
 function StartingPage() {
@@ -12,6 +14,8 @@ function StartingPage() {
     <div>
       <LandingPage />
       <FirstFloor />
+      <SecondFloor />
+      <MinusFloor />
     </div>
   )
 }
