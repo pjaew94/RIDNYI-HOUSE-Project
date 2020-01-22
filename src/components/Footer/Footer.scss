@@ -1,0 +1,179 @@
+.footer-wrapper {
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+
+  .footer-container {
+    height: 100%;
+    width: 80%;
+    background: rgb(41, 41, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .footer-top-container {
+      height: 80%;
+      width: 80%;
+      display: flex;
+      align-items: center;
+
+      .top-left {
+        height: 70%;
+        width: 40%;
+
+        h1 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 3rem;
+        }
+      }
+
+      .top-right {
+        height: 70%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .top-right-top {
+          height: 30%;
+          width: 100%;
+          display: flex;
+
+          .call,
+          .email,
+          .visit {
+            height: 100%;
+            width: 33%;
+            display: flex;
+            align-items: center;
+
+            .line-container {
+              position: relative;
+              width: 50px;
+              height: 100%;
+              margin-right: 20px;
+
+              .line {
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                background: white;
+                top: 50%;
+              }
+            }
+          }
+        }
+
+        .top-right-bottom {
+          height: 70%;
+          width: 100%;
+          display: flex;
+
+          ul {
+            height: 100%;
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom-container {
+      height: 20%;
+      width: 80%;
+      display: flex;
+      align-items: center;
+
+      .bottom-left {
+        height: 100%;
+        width: 40%;
+      }
+
+      .bottom-right {
+        height: 100%;
+        width: 60%;
+        display: flex;
+
+        .facebook,
+        .youtube,
+        .copy-right {
+          height: 100%;
+          width: 33%;
+          display: flex;
+          align-items: center;
+
+          .line-container {
+            position: relative;
+            width: 50px;
+            height: 100%;
+            margin-right: 20px;
+
+            .line {
+              height: 1px;
+              width: 100%;
+              position: absolute;
+              background: white;
+              top: 50%;
+            }
+          }
+
+          .text {
+            display: flex;
+            align-items: center;
+
+            p {
+              margin-right: 10px;
+
+              a {
+                text-decoration: none;
+                color: white;
+              }
+            }
+          }
+        }
+        .copy-right {
+          p {
+            font-size: 0.7rem;
+          }
+        }
+
+        .facebook .text {
+          transition: color 0.5s ease-in-out;
+
+          a {
+            transition: color 0.5s ease-in-out;
+          }
+        }
+
+        .facebook .text:hover,
+        .facebook .text a:hover{
+          color: #3b5998;
+        }
+
+        .youtube .text {
+          transition: color 0.5s ease-in-out;
+
+          a {
+            transition: color 0.5s ease-in-out;
+          }
+        }
+
+        .youtube .text:hover,
+        .youtube .text a:hover{
+          color: #FF0000;
+        }
+      }
+    }
+  }
+}

@@ -2,15 +2,15 @@
 .first-floor-wrap {
   width: 100%;
   height: auto;
-  background: #b6b5b4;
+  background: #FFFFFF;
   font-family: "Work Sans", sans-serif;
-  color: white;
-  margin-bottom: 7%;
+  color: Black;
+  // margin-bottom: 7%;
 
   .first-floor {
     width: 100%;
     height: 400vh;
-    background: #b6b5b4;
+    background: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,6 +35,7 @@
         height: 30%;
         display: flex;
         align-items: center;
+        margin-left: 3%;
         h1 {
           font-family: "Montserrat", sans-serif;
           font-size: 5rem;
@@ -98,7 +99,7 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background: #b6b5b4;
+            background: #FFFFFF;
             top:0;
             left:0;
           }
@@ -143,7 +144,7 @@
           position: absolute;
           height: 100%;
           width: 100%;
-          background: #b6b5b4;
+          background: white;
           top: 0 ;
         }
       }
@@ -166,7 +167,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: #b6b5b4;
+        background: #FFFFFF;
       }
     }
   }

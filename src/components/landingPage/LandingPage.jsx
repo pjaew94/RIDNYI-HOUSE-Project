@@ -37,19 +37,16 @@ function LandingPage(props) {
 
     gsap.fromTo(nav, { y: -200, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 4, ease: "power3" })
 
-    gsap.from(leftBg, { y: -2000, duration: 3, ease: "power2" })
-    gsap.from(rightBg, { y: -2000, duration: 3, delay: 0.2, ease: "power2" })
+    gsap.from(year, { x: -300, opacity: 0, duration: 2, delay: 0.4, ease: "power2" })
+    gsap.from(title1, { x: -300, opacity: 0, duration: 2, delay: 0.6, ease: "power2" })
+    gsap.from(title2, { x: -300, opacity: 0, duration: 2, delay: 0.8, ease: "power2" })
+    gsap.from(description, { x: -300, opacity: 0, duration: 2, delay: 1, ease: "power2" })
+    gsap.from(locationArea, { x: 300, opacity: 0, duration: 2, delay: 1, ease: "power2" })
+    gsap.from(team, { x: 300, opacity: 0, duration: 2, delay: 0.2, ease: "power2" })
+    gsap.from(button, { x: -300, opacity: 0, duration: 2, delay: 1.2, ease: "power2" })
 
-    gsap.from(year, { x: -300, opacity: 0, duration: 2, delay: 3.4, ease: "power2" })
-    gsap.from(title1, { x: -300, opacity: 0, duration: 2, delay: 3.6, ease: "power2" })
-    gsap.from(title2, { x: -300, opacity: 0, duration: 2, delay: 3.8, ease: "power2" })
-    gsap.from(description, { x: -300, opacity: 0, duration: 2, delay: 4, ease: "power2" })
-    gsap.from(locationArea, { x: 300, opacity: 0, duration: 2, delay: 4, ease: "power2" })
-    gsap.from(team, { x: 300, opacity: 0, duration: 2, delay: 3.2, ease: "power2" })
-    gsap.from(button, { x: -300, opacity: 0, duration: 2, delay: 4.2, ease: "power2" })
-
-    gsap.to(imageMask, { x: "-100%", duration: 3.2, delay: 3, ease: "power2" })
-    gsap.to(image, { opacity: 1, duration: 3.2, delay: 3, ease: "power2" })
+    gsap.to(imageMask, { x: "-100%", duration: 3.6, delay: 0.4, ease: "power2" })
+    gsap.to(image, { opacity: 1, duration: 3.6, delay: 0.4, ease: "power2" })
 
   })
 

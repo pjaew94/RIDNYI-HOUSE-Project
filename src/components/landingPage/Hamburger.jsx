@@ -1,21 +1,25 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
+import { useInView } from 'react-intersection-observer'
 import './Hamburger.scss'
 
 
 
 function Hamburger(props) {
 
+  let hamburger = useRef(null)
+
+
+
+
   function clickBurger() {
     if (props.burgerStatus === true) {
       gsap.to(burgerLine1, { opacity:0, width: 0, right: 22.5 ,duration: 1, ease: "power2"})
       gsap.to(burgerLine3, {opacity:0, width: 0, left: 22.5 ,duration: 1, ease: "power2"})
-      gsap.to(burgerLine2, {backgroundColor: "#FFFFFF" ,duration: 1, ease: "power2"})
       props.setBurgerStatus(false)
     } else {
       gsap.to(burgerLine1, {opacity:1, width: "50%", right: 22.5 ,duration: 1, ease: "power2"})
       gsap.to(burgerLine3, {opacity:1, width: "50%", left: 22.5 ,duration: 1, ease: "power2"})
-      gsap.to(burgerLine2, {backgroundColor: "#938778" ,duration: 1, ease: "power2"})
       props.setBurgerStatus(true)
     }
   }

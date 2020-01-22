@@ -7,6 +7,7 @@ import LandingPage from './landingPage/LandingPage'
 import FirstFloor from './FirstFloor/FirstFloor'
 import SecondFloor from './SecondFloor/SecondFloor'
 import MinusFloor from './MinusFloor/MinusFloor'
+import Footer from './Footer/Footer'
 
 
 function StartingPage() {
@@ -16,6 +17,7 @@ function StartingPage() {
       <FirstFloor />
       <SecondFloor />
       <MinusFloor />
+      <Footer />
     </div>
   )
 }

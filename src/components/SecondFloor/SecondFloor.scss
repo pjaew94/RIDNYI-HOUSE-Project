@@ -1,12 +1,23 @@
 .second-floor-wrapper {
   height: 100vh;
   width: 100%;
-  background: #b6b5b4;
+  background: #FFFFFF;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
+
+  .second-floor-container {
+  height: 100vh;
+  width: 80%;
+  background: #FFFFFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  }
 
   .second-floor-left-container {
    
@@ -15,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 3%;
+    padding-bottom: 3%;
     z-index: 3;
 
     .left-text-container {
@@ -75,7 +86,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      background: #b6b5b4;
+      background: #FFFFFF;
       z-index: 2;
 
     }

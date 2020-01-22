@@ -129,7 +129,7 @@ function NavigationMenu(props) {
           to="Home"
           spy={true}
           smooth={true}
-          duration={1200}
+          duration={2000}
           className='nav-links'
         >
           <p ref={el => homeText = el}>Home</p>
@@ -156,7 +156,7 @@ function NavigationMenu(props) {
           to="First Floor"
           spy={true}
           smooth={true}
-          duration={1200}
+          duration={2000}
           className='nav-links'
         >
           <p ref={el => firstFloorText = el}>First Floor</p>
@@ -171,7 +171,7 @@ function NavigationMenu(props) {
           to="Second Floor"
           spy={true}
           smooth={true}
-          duration={1200}
+          duration={2000}
           className='nav-links'
         >
           <p ref={el => secondFloorText = el}>Second Floor</p>
@@ -186,22 +186,27 @@ function NavigationMenu(props) {
           to="Minus First Floor"
           spy={true}
           smooth={true}
-          duration={1200}
+          duration={2000}
           className='nav-links'
         >
           <p ref={el => minusFirstFloorText = el}>Minus First Floor</p>
           <div className='line' ref={el => minusFirstLine = el}></div>
         </LinkScroll>
 
-        <LinkRouter
+        <LinkScroll
           onMouseEnter={contactHover} 
           onMouseLeave={contactUnhover}
-          to='/'
+          onClick={navClick}
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          duration={2000}
           className='nav-links'
-          exact style={{ textDecoration: 'none' }}>
+         >
           <p ref={el => contactText = el}>Contact</p>
           <div className='line' ref={el => contactLine = el}></div>
-        </LinkRouter>
+        </LinkScroll>
 
         <div className="bottom-horizontal-line"></div>
         <div className="bottom-vertical-line"></div>

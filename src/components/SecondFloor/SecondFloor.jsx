@@ -39,7 +39,7 @@ function SecondFloor(props) {
   useEffect(() => {
     if (inViewText2) {
       const textP1 = secondLeft.firstChild.children[2]
-      gsap.to(textP1, { x: 0, autoAlpha: 1, duration: 2.5, ease: "power2" })
+      gsap.to(textP1, { x: 0, autoAlpha: 1, duration: 2.5, delay: 0.5, ease: "power2" })
       console.log(inViewText2)
       console.log(textP1)
     }
@@ -62,40 +62,42 @@ function SecondFloor(props) {
 
   return (
     <div name='Second Floor' className='second-floor-wrapper'>
-      <div className="second-floor-left-container" ref={el => secondLeft = el}>
-        <div className="left-text-container" >
-          <div className="second-floor-title" ref={titleText}>
-            <h1>SECOND FLOOR</h1>
-          </div>
-          <div className="left-text-container-line"></div>
-          <div className="second-floor-text" ref={p1Text}>
-            <p>Here they will sleep and wake up.</p>
-            <p>The second floor consists of three blocks: for parents, children, and guests. A parent's bedroom is a snow-white lady with several shades of color. The bathroom is far from being modest — it keeps everything you need behind the glass only. Nearby there is a study and a wardrobe. The guest block includes two rooms with a shared bathroom and paintings by Serhii Makhno.</p>
+      <div className="second-floor-container">
+        <div className="second-floor-left-container" ref={el => secondLeft = el}>
+          <div className="left-text-container" >
+            <div className="second-floor-title" ref={titleText}>
+              <h1>SECOND FLOOR</h1>
+            </div>
+            <div className="left-text-container-line"></div>
+            <div className="second-floor-text" ref={p1Text}>
+              <p>Here they will sleep and wake up.</p>
+              <p>The second floor consists of three blocks: for parents, children, and guests. A parent's bedroom is a snow-white lady with several shades of color. The bathroom is far from being modest — it keeps everything you need behind the glass only. Nearby there is a study and a wardrobe. The guest block includes two rooms with a shared bathroom and paintings by Serhii Makhno.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="second-floor-right-container" ref={el => secondRight = el}>
-        <div className="right-slider-container">
-          {inViewText3 ? <Carousel
-            showStatus={false}
-            infiniteLoop={true}
-            interval={8000}
-            transitionTime={1300}
-            showThumbs={false}
-            autoPlay
-          >
-            <img src={bathroom1} alt=''></img>
-            <img src={bathroom2} alt=''></img>
-            <img src={bedroom1} alt=''></img>
-            <img src={bedroom2} alt=''></img>
-            <img src={bathroom3} alt=''></img>
-            <img src={bathroom4} alt=''></img>
-            <img src={bedroom3} alt=''></img>
-            <img src={bedroom4} alt=''></img>
-            <img src={bedroom5} alt=''></img>
-            <img src={bedroom6} alt=''></img>
-          </Carousel> : null}
-          <div className="slider-mask" ref={imgMask}></div>
+        <div className="second-floor-right-container" ref={el => secondRight = el}>
+          <div className="right-slider-container">
+            {inViewText3 ? <Carousel
+              showStatus={false}
+              infiniteLoop={true}
+              interval={8000}
+              transitionTime={1300}
+              showThumbs={false}
+              autoPlay
+            >
+              <img src={bathroom1} alt=''></img>
+              <img src={bathroom2} alt=''></img>
+              <img src={bedroom1} alt=''></img>
+              <img src={bedroom2} alt=''></img>
+              <img src={bathroom3} alt=''></img>
+              <img src={bathroom4} alt=''></img>
+              <img src={bedroom3} alt=''></img>
+              <img src={bedroom4} alt=''></img>
+              <img src={bedroom5} alt=''></img>
+              <img src={bedroom6} alt=''></img>
+            </Carousel> : null}
+            <div className="slider-mask" ref={imgMask}></div>
+          </div>
         </div>
       </div>
     </div>

@@ -51,7 +51,7 @@ function MinusFloor(props) {
   useEffect(() => {
     if (inViewText2) {
       const pText = minusFirstSection.children[1].firstChild.children[1]
-      gsap.to(pText, { x: 0, autoAlpha: 1, duration: 2.5, ease: "power2" })
+      gsap.to(pText, { x: 0, autoAlpha: 1, duration: 2.5, delay: 0.5, ease: "power2" })
     }
   }, [inViewText2])
 
@@ -127,7 +127,7 @@ function MinusFloor(props) {
       <div className="minus-second-section" ref={el => minusSecondSection = el}>
         <div className="minus-second-left">
           <div className="minus-second-left-img1">
-            <Carousel
+            {inViewImg2 ? <Carousel
               className='top-left-carousel'
               showStatus={false}
               infiniteLoop={true}
@@ -140,21 +140,21 @@ function MinusFloor(props) {
             >
               <img src={leftTop1} alt=''></img>
               <img src={leftTop2} alt=''></img>
-            </Carousel>
+            </Carousel> : null}
             <div className="left-img1-mask" ref={img2}></div>
           </div>
           <div className="minus-second-left-img2">
-            <img src={leftBottom} alt=''></img>
+            {inViewImg3 ? <img src={leftBottom} alt=''></img> : null}
             <div className="left-img2-mask" ref={img3}></div>
           </div>
         </div>
         <div className="minus-second-right">
           <div className="minus-second-right-img1">
-            <img src={rightTop} alt=''></img>
+            {inViewImg4 ? <img src={rightTop} alt=''></img> : null}
             <div className="right-img1-mask" ref={img4}></div>
           </div>
           <div className="minus-second-right-img2">
-            <Carousel
+            {inViewImg5 ? <Carousel
               className='bottom-right-carousel'
               showStatus={false}
               infiniteLoop={true}
@@ -168,7 +168,7 @@ function MinusFloor(props) {
               <img src={rightBottom1} alt=''></img>
               <img src={rightBottom2} alt=''></img>
 
-            </Carousel>
+            </Carousel> : null}
             <div className="right-img2-mask" ref={img5}></div>
           </div>
         </div>
