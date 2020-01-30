@@ -19,10 +19,11 @@
     "react-transition-group": "^4.3.0"
   },
   "scripts": {
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "deploy": "serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"
